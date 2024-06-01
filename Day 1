@@ -1,0 +1,12 @@
+#day1 #learningwithkucc #60Daysofjs
+
+First day of learning JavaScript under 60 Days of JS challenge by KUCC
+
+I learnt about the workings of the web, how the browser send request to server and the background files that work for loading a website on a browser
+
+I gained deep knowledge on how website works. As user clicks on the url the following thing happens
+1. The url is resolved and the request is sent to webserver
+2. In return the response is sent by webserver to the browser
+3. The files are loaded and the page is displayed
+
+This is fun to learn
