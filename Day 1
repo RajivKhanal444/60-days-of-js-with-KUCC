@@ -1,0 +1,11 @@
+#day1 #learningwithkucc #60Daysofjs
+
+First day of learning JavaScript
+Today I learnt about the workings of the web, how the browser send request to server and the background files that work for loading a website on a browser.
+The internal thing that happens when the link/url is clicked is a sequence of task done by server and browser and as follows:
+
+1. First the url gets resolved and request is sent to the server
+2. server interpets the request and sent back a response to the browser
+3. Files are loaded and page is displayed
+
+This is the first day, and I learnt about basics of web and the importance of JS for webapp.
