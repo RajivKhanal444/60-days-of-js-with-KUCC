@@ -1,0 +1,36 @@
+This is day 2 of learning javascript
+Today I learnt about how the HTML is used as a mark-up language to make different elements for websites. I also learnt about some of the basic html tags and how they can be used in the different part for website.
+#day2 #60DaysOfjs #learningwithkucc
+
+The code I made today
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First HTML Document</title>
+</head>
+<body>
+    <h1>Hello everybody!</h1>
+    <h2>This is my first webpage.</h2><h3><a href="https://google.com">This is a link for google.com</a></h3>
+    <div><img src="F:\60 days js\bhupendra-gehlot-11.jpg" height="550px" width="400px"></div>
+    <p><h3>This is a picture of IronMan. A comic character played by legendery actor Robert Downey Jr. His some of the iconic dialogue are<ol>
+        <li>I am Iron Man.</li>
+        <li>Like the old man said,"Together"</li>
+        <li>Sometimes we gotta run before we can walk.</li>
+        <li>Wake up jarvis! Daddy's home</li>
+    </ol>
+    </h3></p>
+    <p><h2>Something about me</h2></p>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Roll No</th>
+        </tr>
+        <tr>
+            <th>Rajiv Khanal</th>
+            <th>25</th>
+        </tr>
+    </table>
+    </body>
+</html>
