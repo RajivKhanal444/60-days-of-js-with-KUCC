@@ -1,0 +1,79 @@
+#day3 #60DaysOfJs #learningwithkucc
+Day 3 of learning JS with KUCC 
+Today I learnt about the use of css in the website. This styling is for making website attractive. Now I learnt how css play its role. Although I tried my best but I think my today's outcome isn't much good.  
+
+code
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="./style.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 3</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        img{
+            height: 50%;
+            width: 30%;
+        }
+        h3{
+            margin: 0%;
+            padding: 0%;
+            display: inline-block;
+            width: 19%;
+            /* display: flex;
+            flex-direction: row; */
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello Everyone</h1>
+    <div class="grt"><h2 class="grt">Welcome to a Car website</h2></div>
+    <div class="top">
+        <div style="display: inline-block;width: 33%;"><h2 style="margin: 0%;"><a href="F:/60%20days%20js/day%203/index.html">refresh link</a></h2></div>
+        <div style="display: inline-block;width: 33%;"><h2 style="margin: 0%;text-align: center;"><a href="http://google.com">google.com</a></h2></div>
+        <div style="display: inline-block;width: 33%;"><h2 style="margin: 0%;text-align: end;"><a href="http://youtube.com">youtube.com</a></h2></div>
+    </div>
+    <div id="divimg">
+
+            <img src="./1996 dodge charger.jpg">
+            <h3>1996 dodge charger</h3>
+
+ 
+            <img src="./chevrolet camaro 1982.jpg">
+            <h3>1982 chevrolet camaro</h3>
+
+
+            <img src="./Dodge challenger 1970.jpg">
+            <h3>1970 Dodge challenger</h3>
+
+
+            <img src="./ford mustang 1969.jpg">
+            <h3>1969 ford mustang</h3>
+
+    </div>
+
+</body>
+</html>
+
+
+css
+.top{
+    /* border-radius: 25%; */
+    background-color: whitesmoke;
+    margin-bottom: 0%;
+}
+.grt{
+    text-align: center;
+    background-color: azure;
+    margin: 0%;
+}
+
+
+#divimg{
+    display: inline-block;
+}
+
+
