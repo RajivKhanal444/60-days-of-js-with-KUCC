@@ -1,0 +1,137 @@
+#day4 #60DaysOfJs #learningwithkucc
+Day 4 of learning javascript
+Today I learnt about learning how to make a side bar in CSS. Along with basic concepts of CSS variables. With basic animation of div with colors.   
+
+
+code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 4</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="hello"><h1>
+        Hello Everyone!
+    </h1>
+    </div>
+    <div class="header">
+        <a href="./index.html">Welcome</a>
+        <a href="./index.html">About</a>
+        <a href="./index.html">Notices</a>
+        <a href="./index.html">Contact</a>
+        <a href="./index.html">Address</a>
+    </div>
+    <div class="sidebar">
+        <a href="./index.html">Welcome</a>
+        <a href="./index.html">About</a>
+        <a href="./index.html">Notices</a>
+        <a href="./index.html">Contact</a>
+        <a href="./index.html">Address</a>
+    </div>
+    <div class="content">
+        <h1>Welcome to the page!</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac aliquam sapien, sit amet euismod dui. Cras pharetra nulla vitae mi molestie, a sollicitudin nisi auctor. Mauris dignissim sodales sapien, non dictum sapien iaculis at. Integer condimentum, elit vitae blandit varius, sapien nunc congue diam, ac bibendum eros arcu at erat. Fusce non tortor eget eros vehicula congue. Aenean non egestas nisi. Ut a fringilla erat, non iaculis arcu. Quisque mattis iaculis felis in lobortis.</p>
+        
+        <h2>About</h2>
+        <p>Donec feugiat varius ante. Duis at rhoncus massa. Nunc sodales pretium turpis eget luctus. Aliquam erat volutpat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer auctor molestie tellus et varius. Nunc in quam eget tortor volutpat egestas vel et ipsum. Aliquam erat volutpat.</p>
+        
+        <h2>Notice</h2>
+        <p>Duis mollis sed quam viverra interdum. Mauris imperdiet lorem sit amet vehicula rhoncus. Nulla et aliquam sapien, ut dictum nibh. Nunc ac erat a massa iaculis sodales. Donec tempus, diam imperdiet semper molestie, risus libero venenatis massa, vehicula sollicitudin enim lectus at nunc. Donec pellentesque enim eget lorem efficitur hendrerit. Nullam dictum viverra ex at interdum. Donec mi felis, iaculis sit amet tristique in, pulvinar a tortor. Suspendisse auctor risus ut ornare convallis. Praesent iaculis vel urna ut bibendum. Mauris varius, erat ut molestie scelerisque, tortor erat aliquam dui, in commodo ipsum risus nec diam. Cras tincidunt nisi sit amet scelerisque lacinia.</p>
+    </div>
+
+    <div class="box">
+        <h5 class="h5test">test animation</h5>
+    </div>
+</body>
+</html>
+
+
+
+css
+:root{
+    --bright: rgb(245, 220, 245);
+    --dark: rgb(68, 6, 68);
+    --btn:rgb(111,111,111);
+}
+
+body {
+    margin: 0;
+    font-family: monospace, cursive;
+}
+.header {
+    background-color: var(--bright);
+    padding: 10px;
+    text-align: right;
+}
+.header a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: var(--btn);
+}
+.header a:hover{
+    /* background-color: var(--dark); */
+}
+.sidebar {
+    background-color:var(--bright);
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 60px;
+}
+.sidebar a {
+    display: block;
+    color: var(--bright);
+    padding: 10px;
+    text-decoration: none;
+}
+.sidebar a:hover {
+    background-color: var(--dark);
+}
+.content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+.hello{
+    text-align: center;
+}
+.box{
+    background: white;
+    margin-left: 25%;
+    margin-top: 0%;
+    /* margin-right: ; */
+    width: 200px;
+    height: 200px;
+    /* position: ab */
+    animation-name: myanimation;
+    animation-duration: 10s;
+    text-align: center;
+    align-items: center;
+}
+
+.h5test{
+    padding-top:25%;
+    margin-top: 0%;
+}
+@keyframes myanimation{
+    0% {
+        background-color:yellow;
+   }
+   25%{
+    background-color: antiquewhite;
+   }
+   50%{
+    background-color: azure;
+   }
+   75%{
+    background-color: bisque;
+   }
+   100%{
+    background-color: yellowgreen;
+   }
+}
