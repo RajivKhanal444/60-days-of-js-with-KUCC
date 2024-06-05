@@ -1,0 +1,148 @@
+Day 5 of learning JavaScript
+
+Today I started 3day portfolio project. I created a basic framework with a solidifying image. I will add contents in the next following day.
+#day4 #60DaysOfJs #learningwithkucc
+
+
+
+  code
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="header">
+        <div  id="portfolio">
+            <h1 class="isth1">Portfolio</h1>
+        </div>
+        <div class="content">
+            <a href="./index.html">Welcome</a>
+            <a href="./index.html">About Me</a>
+            <a href="./index.html">Services</a>
+            <a href="./index.html">Skills</a>
+            <a href="./index.html">Contact</a>
+            <a href="./index.html">Appointment</a>
+            <!-- <a href="./index.html"></a> -->
+        </div>
+    </div>
+    <div class="intro">
+        <h2 class="work1">Hello! This is</h2>
+        <h1 class="work2">Rajiv Khanal</h1>
+        <h2 class="work3">I'm a Web Developer</h2>
+        <img src="./RajeshHamal-removebg-preview.png" class="img">
+    </div>
+</body>
+</html>
+
+
+
+  css
+  :root{
+    --bright: rgb(245, 220, 245);
+    --dark: rgb(68, 6, 68);
+    --btn:#EEEEEE;
+    /* --brpt: #F3F7EC;
+    --dkpt: rgb(77, 77, 77); */
+}
+
+body{
+    background-color: var(--btn);
+}
+
+/* mobile phone */
+@media (max-width:600px){
+    
+}
+
+/* tablet phone */
+@media (min-width:600px) and (max-width: 900px){
+    
+    
+}
+
+/* laptop and desktop screens */
+@media (min-width:900px){
+    #portfolio{
+        text-align: left;
+        font-family: 'Courier New', Courier, monospace;
+        padding: 0%;
+        margin: 0%;
+        display: inline-block;
+        /* content: ; */
+    }
+    .isth1{
+        padding-left: 70px;
+        margin-top:30px;
+        margin-bottom: 0px;
+    }
+    .header{
+        height: 100px;
+        width: 100%;
+        background-color: wheat;
+    }
+    .content{
+        /* padding: 11px; */
+        padding-bottom: 0px;
+        margin-left: 50%;
+        width: 50%;
+        /* text-align: right; */
+    }
+    .content a {
+        margin: 0 29px;
+        text-decoration: none;
+        color: var(--btn);
+    }
+
+    .intro{
+        text-align: center;
+    }
+    .work1{
+        /* float: left; */
+        display: inline-block;
+        /* padding-left: 29; */
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    .work3{
+        /* float: left; */
+        display: inline-block;
+        /* padding-left: 29; */
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    .work2{
+        /* float: left; */
+        display: inline-block;
+        /* padding-left: 29; */
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    .img{
+        height: 100%;
+        float: right;
+        animation-name: myanimation;
+        animation-duration: 5s;
+    }
+
+    @keyframes myanimation{
+        0% {
+            opacity: 0.2;
+       }
+       25%{
+       opacity: 0.4;
+       }
+       50%{
+        opacity: 0.6;
+       }
+       75%{
+        opacity: 0.8;
+       }
+       100%{
+        opacity: 1;
+       }
+    }
+}
