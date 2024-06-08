@@ -1,0 +1,37 @@
+Day 8 of learning js
+
+Today I installed node.js in my pc and learnt some basics about variables, data types and functions in javascript.
+
+#day8 #60DaysOfJs #learningwithkucc
+
+
+js code
+
+let a= console.log('hello world');
+
+//object
+let personDATA={
+    firstName : 'Ram',
+    lastName :"Aryal",
+    age:20
+};
+
+personDATA.firstName = 'Sita';
+console.log('hello'+ personDATA.firstName);
+console.log(typeof(personDATA));
+console.log(personDATA);
+
+//array
+let arr=['red','blue',3,0];
+
+console.log(arr);
+console.log(arr.length);
+
+
+//functions
+function greet(){
+    var firstName = "Pepper"
+    console.log("Namaste" + firstName);
+}
+
+greet();
