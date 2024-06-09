@@ -1,0 +1,42 @@
+Day 9 of learning javascript
+Today I learnt about the concept of loops in javascript. I tried to make an application where user can search books in different shelf & add unavailable books. its working but it didn't go well.
+#day9 #60DaysOfJs #learningwithkucc
+
+code
+  alert("we have 5 shelf. check all shelf books can be any where");
+// alert("")
+
+let book = prompt("Enter 2 digit book serial number");
+// book=Number.parseInt(book);//changes the string input into int
+
+
+
+let bookNO=[];
+bookNO[0]="22"
+bookNO[1]="11"
+bookNO[2]="78"
+bookNO[3]="31"
+bookNO[4]="34"
+
+
+for (i=0; i<=6; i++)
+    {
+    if (book == bookNO[i]){
+        alert("checking in shelf" +i+"..."+"book found in shelf " + i);        
+    }
+    else{
+        alert("checking in shelf" +i+"..."+"book not available in shelf " + i);
+    }
+}
+
+        let newBook = prompt("book not available. do you wanna register new book: y/n");
+        if(newBook=='y'){
+            bookNO[5] = prompt("Enter serial no of new book");
+            alert("new book registered at shelf 6" );
+        }
+else if(newBook=='n'){
+            alert("okay. have a nice day");
+        }
+else{
+            alert("invalid");
+}
