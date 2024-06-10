@@ -1,0 +1,157 @@
+day 10 
+i learnt about arrys 
+
+code
+
+alert("we have 7 shelf. check all shelf books can be any where");
+// alert("")
+
+var book = prompt("Enter book name  :  ");
+// alert(book)
+// book=Number.parseInt(book);//changes the string input into int
+
+// const cars = ["Saab", "Volvo", "BMW"];
+
+let shelfNO1=['physics', 'biology', 'finance', 'C program']
+let shelfNO2=["health", "english", "nepali", "spanish"]
+let shelfNO3=["maths","java program","dsa","ruby program"]
+let shelfNO4=["elementry engineering","drawing"]
+let shelfNO5=["history","affairs"]
+let shelfNO7=[]
+let shelfNO8=[]
+let shelfNO6=[]
+
+
+// alert(resSH1);
+
+
+// resSH4=
+// resSH5=
+// resSH6=
+// resSH7=
+// resSH8=
+
+// function isInArray(value, array) {
+//     return array.indexOf(value) > -1;
+//   }
+
+// resSH1= function isInArray(book, shelfNO1){
+//     // return shelfNO1.indexOf(book);
+//     return false
+// }
+
+if(shelfNO1.includes(book))
+    {alert("book found in shelf 1");}
+else if (shelfNO2.includes(book))
+    {alert("book found in shelf 2");}
+else if (shelfNO3.includes(book))
+    {alert("book found in shelf 3");}
+else if (shelfNO4.includes(book))
+    {alert("book found in shelf 4");}
+else if (shelfNO5.includes(book))
+    {alert("book found in shelf 5");}
+else if (shelfNO6.includes(book))
+    {alert("book found in shelf 6");}
+else if (shelfNO7.includes(book))
+    {alert("book found in shelf 7");}
+else if (shelfNO8.includes(book))
+    {alert("book found in shelf 8");}
+
+else{
+    let newBOOK=prompt("book not found. do you want to a book - y/n  ");
+    if (newBOOK=='y'){
+
+        newShelf = prompt("enter shelf number (1 to 8):  ");
+        newShelf=Number.parseInt(newShelf);//changes the string input into int
+        if (newShelf== 1){
+            if (shelfNO1.length==4){
+                alert("shelf 1 is full");
+            }
+            else{
+                newBOOKname=prompt("enter new book name:  ");
+                shelfNO1.push(newBOOKname);alert("book added now the books in shelf no 1 are " +shelfNO1)
+            }
+        }
+
+        else if (newShelf== 2){
+            if (shelfNO2.length==4){
+                alert("shelf 2 is full");
+            }
+            else{
+                newBOOKname=prompt("enter new book name:  ");
+                shelfNO2.push(newBOOKname);
+                alert("book added now the books in shelf no 2 are " +shelfNO2)
+            }
+        }
+
+        else if (newShelf== 3){
+            if (shelfNO3.length==4){
+                alert("shelf 3 is full");
+            }
+            else{
+                newBOOKname=prompt("enter new book name:  ");
+                shelfNO3.push(newBOOKname);alert("book added now the books in shelf no 3 are " +shelfNO3)
+            }
+        }
+
+        else if (newShelf== 4){
+            if (shelfNO4.length==4){
+                alert("shelf 1 is full");
+            }
+            else{
+                newBOOKname=prompt("enter new book name:  ");
+                shelfNO4.push(newBOOKname);alert("book added now the books in shelf no 4 are " +shelfNO4)
+            }
+        }
+
+        else if (newShelf== 5){
+            if (shelfNO5.length==4){
+                alert("shelf 5 is full");
+            }
+            else{
+                newBOOKname=prompt("enter new book name:  ");
+                shelfNO5.push(newBOOKname);alert("book added now the books in shelf no 5 are " +shelfNO5)
+            }
+        }
+
+        else if (newShelf==6){
+            if (shelfNO6.length==4){
+                alert("shelf 6 is full");
+            }
+            else{
+                newBOOKname=prompt("enter new book name:  ");
+                shelfNO6.push(newBOOKname);
+                alert("book added now the books in shelf no 6 are " +shelfNO6)
+            }
+        }
+
+        else if (newShelf==7){
+            if (shelfNO7.length==4){
+                alert("shelf 7 is full");
+            }
+            else{
+                newBOOKname=prompt("enter new book name:  ");
+                shelfNO7.push(newBOOKname);
+                alert("book added now the books in shelf no 7 are " +shelfNO7)
+            }
+        }
+
+        else if (newShelf==8){
+            if (shelfNO8.length==4){
+                alert("shelf 8 is full");
+            }
+            else{
+                newBOOKname=prompt("enter new book name:  ");
+                shelfNO8.push(newBOOKname);
+                alert("book added now the books in shelf no 8 are " +shelfNO8)
+            }
+        }
+
+        else if (newBOOK=='n'){
+            alert("thnak you")
+        }
+        else{
+            alert("error")
+        }
+    }
+}
