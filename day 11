@@ -1,0 +1,21 @@
+Day 11 of learning javascript
+Today I learnt about the Functions & Objects. And their different methods
+#day11 #60DaysOfJs #learningwithkucc
+
+
+code
+function hello(user){
+    console.log(user.toUpperCase())
+}
+
+
+hello('javascript')
+
+
+
+function cal(width, height){
+    return width*height;
+}
+
+
+
