@@ -1,0 +1,60 @@
+Day 14 of learning Javascript
+Today I learnt about regex and error handling.
+#day14 #60DaysOfJs #learningwithkucc
+
+
+
+
+
+let spelling ="Mississippi"
+let regex =/s+/g; // matches the s
+let res= spelling.match(regex)
+console.log(res)
+
+
+// find the character
+
+let str="titanic"
+let r=/t[a-z]*?i/
+str.match(r)
+
+
+// .* //finds 0 or more character
+
+// /C+/  finds c one or more than one time
+
+
+
+// ^ only matches at the beginning 
+//  $ matches in ending string
+
+// /\w/ matches all number and character A2Z a2z 0to9 _
+// /\W/g  matches except all number and character A2Z a2z 0to9 _ eg space
+
+// /\d/g   match all numbers
+// /\D/g   match all non number
+
+// /\s/g   match white space
+//  /\S/g   match all nonwhite space
+
+// /?/   matches specific word after it
+
+//  /A(?=a)/ checks for A first and If a is found later it returns A
+//  /A(?!a)/ vice versa
+
+
+
+
+// throw '404 JavaScript Not Found'
+
+try {
+    throw "boom";
+} catch{
+    console.log("boom undone")
+}
+
+console.log("hi there")
+
+
+// try catch scooping
+
