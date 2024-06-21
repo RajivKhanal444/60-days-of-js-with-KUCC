@@ -1,0 +1,150 @@
+Day 21 of learning javascript
+Today I completed todo list website. Since it was two day project today I created a js file for the website. 
+#day21 #60DaysOfJs #learningwithkucc
+
+html<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="./day21 (1).css">
+</head>
+<body>
+    <div class="box">
+        <h1>To Do List</h1>
+        <div class="input-box">
+            <input class="todo-input" placeholder="Add new task...">
+            <button onclick="newElement()" class="add-button">
+                <i class="fa fa-plus-circle"></i>
+            </button>
+        </div>
+        <div class="todo-box">
+            <ul class="todos"></ul>
+            <!-- <img class="empty-image" src="./day20 (1).jpg"> -->
+             <!-- <img class="empty-image" src="./day20__1_-removebg-preview.png"> -->
+        </div>
+    </div>
+    <!-- <script src="./newday.js"></script> -->
+     <script src="./day21 (1).js"></script>
+</body>
+</html>
+
+css
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:url(./day21\ \(2\).jpg) no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+
+.box{
+    width: 400px;
+    height: 450px;
+    padding: 30px;
+    padding-top: 10px;
+    background: transparent;
+    border: 2px solid #e6b7eca1;
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+}
+
+h1{
+    color: #eee;
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.input-box{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px
+}
+
+.todo-input{
+    flex: 1;
+    outline: none;
+    padding: 10px 10px 10px 20px;
+    background-color: transparent;
+    border-radius: 30px;
+    color: #eee;
+    font-size: 16px;
+}
+
+.todo-input::placeholder{
+    color: #bfbfbf;
+}
+
+.add-button{
+    border: none; 
+    outline: none;
+    background:#e6b7eca1;
+    color: #fff;
+    font-size: 35px;
+    cursor: pointer;
+    border-radius: 40px;
+    width: 40px;
+    height: 40px;
+}
+
+/* .empty-image{ */
+    /* margin-left: 0px ; */
+    /* margin-top: 0; */
+    /* margin-bottom: ; */
+    /* padding-top: 0px; */
+    /* display: block; */
+/* } */
+
+
+js
+const todoInput = document.querySelector('.todo-input');
+const addButton = document.querySelector('.add-button');
+const todosList = document.querySelector('.todos');
+// const emptyImage = document.querySelector(".empty-image");
+// let todosJson = JSON.parse(localStorage.getItem("todos"))||[];
+
+// function getTodoHtml(todo, index){
+//     let checked =todo.status=="completed"?"checked":"";
+//     return `
+//         <li class="todo">
+//         <label for="${index}">
+//         <input id="${index}" onclick="updateStatus(this)" type="checkbox" ${checked}>
+//         <span class="${checked}">${todo.name}</span>
+//         </label>
+
+// }
+
+// list.addEventListener('click', function(lll)){
+//     if(lll.target.tagname === 'LI'){
+//         lll.target
+//     }
+// }
+
+function newElement() {
+    const todoText = todoInput.value.trim();
+    if (todoText !== '') {
+        const listItem = document.createElement('li');
+        listItem.textContent = todoText;
+        todosList.appendChild(listItem);
+        todoInput.value = '';
+    }
+}
+
+addButton.addEventListener('click', newElement);
+todoInput.addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        newElement();
+    }
+});
