@@ -1,0 +1,43 @@
+Day 22 of learning javascript
+Today I learnt about promise, async, await...  
+#day22 #60DaysOfJs #learningwithkucc
+
+
+// promises
+
+function setup(){
+    delay(5000)    
+    .then(()=>createP('hello'))
+    .catch((err)=> console.log(err))
+}
+
+function delay(time){
+
+    return new Promise((resolve, reject)=>{
+        if (isNaN(time)){
+            reject(new Error('delay requires a valid number'))
+        }
+        else{
+            setTimeOut(resolve(), time)
+        }
+       
+    })
+}
+
+
+
+// async await
+function set(){
+    delayTime(4000)
+        .then(()=>createP('hello'))
+        .catch((err)=>console.log(err))
+}
+
+function delayTime(time){
+    await.delay(time)
+
+    return;    
+}
+
+
+
