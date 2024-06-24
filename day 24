@@ -1,0 +1,111 @@
+Day 24 of learning javascript
+Today I learnt about basic iterators and generators & custom iterators and generators.  
+#day24 #60DaysOfJs #learningwithkucc
+
+
+// generate id
+// usinf iterator and generator
+
+function * generateId(){
+    let id=1
+    while (true){
+        yield id
+        id++
+    }
+}
+// while (Object.next().done!==false){
+
+// }
+const generatorObject= generateId()
+console.log(generatorObject.next())
+console.log(generatorObject.next())
+console.log(generatorObject.next())
+console.log(generatorObject.next())
+// the more the console.log(generatorObject.next()) line the more the number
+
+
+  // function* gex(){
+//     yield 'a';
+//     yield 'b';
+//     return false;
+// }
+// let iter =gex()
+// log(iter)
+// console.log(iter.next())
+// console.log(iter.next())
+// console.log(iter.next())
+
+// basic iterator
+let char=['finn','mat', 'rot', 'luke']
+
+function* gexx(){
+    let i=0
+    yield char[i]
+    i++
+    yield char[i]
+    i++
+    yield char[i]
+    i++
+    yield char[i]
+    i++
+    yield char[i]
+    i++
+}
+
+let iter=gexx()
+log(iter)
+log(iter.next)
+log(iter.next)
+log(iter.next)
+log(iter.next)
+log(iter.next)
+
+
+
+
+// iterator for onbject
+// custom iterator
+
+let endGame={
+    title: 'Marvel The Avengers Endgame',
+    director: 'Russo Brothers',
+    year:'2019'
+}
+let count =-1
+let eg={
+    [Symbol.iterator]:function(){
+        return{
+            next:()=>{
+                count++
+                switch(count){
+                    case 0:
+                        return{
+                            value : endGame.title,
+                            done:false
+                        }
+                    case 1:
+                        return{
+                            value:endGame.director,
+                            done:false
+                        }
+                    case 2:
+                        return{
+                            value:endGame.year,
+                            done:false
+                        }
+                    case 3:
+                        return{
+                            value:undefined,
+                            done:true
+                        }
+                }
+            }
+        }
+    }
+}
+
+let data = eg[Symbol.iterator]();
+log(data.next())
+log(data.next())
+log(data.next())
+log(data.next())
