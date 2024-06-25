@@ -1,0 +1,29 @@
+Day 25 of learning javascript
+Today I learnt about modules and exports & imports.  #day25 #60DaysOfJs #learningwithkucc
+
+
+
+main.js
+  import U,{printName, printAge} from './users'
+
+const user =new U ('Bob', 11)
+console.log(user)
+printName(user)
+printAge(user)
+
+
+    users.js
+    export default class users {
+    constructor(name,age){
+        this.name=name
+        this.age=age
+    }
+}
+
+export function printName(user){
+    console.log(`User's name is ${user.name}`)
+}
+
+export function printAge(user){
+    console.log(`user is ${user.age} years old`)
+}
