@@ -1,0 +1,19 @@
+Day 26 of learning javascript
+Today I learnt about HTTPS and APIs
+#day26 #60DaysOfJs #learningwithkucc
+
+const express =required('express');
+const path =required('path')
+const app = express()
+
+app.use(express.json())
+app.use(express.urlencoded({extended:false}))
+
+app.post('/contact',(req,res)=>{
+    if(!req.body.name){
+        return res.status(400).send('Name is Required')
+    }
+    res.status(201).send(`Thank you ${res.body.name}`)
+})
+
+app.listen(5000,()=>console.log(`server started on 5000`))
