@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do List</title>
     <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
 </head>
 <body>
-    <div class="box">
-        <h1>To Do List</h1>
-        <div class="input-box">
-            <input class="todo-input" placeholder="Add new task...">
-            <button class="add-button">
-                <i class="fa fa-plus-circle"></i>
-            </button>
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="Enter City Name..." spellcheck="false">
+            <button><img src="./images/search.png"></button>
         </div>
-        <div class="todo-box">
-            <ul class="todos"></ul>
-            <img class="empty-image" src="./download.jpg">
+        <div class="weather">
+            <img src="./images/rain.png" class="weather-icon">
+            <h1 class="temp">22°C</h1>
+            <h2 class="city">Kathmandu</h2>
+            <div class="details">
+                <div class="col">
+                    <img src="./images/humidity.png">
+                    <div><p class="humidity">50%</p>
+                    <p>Humidity</p></div>
+                </div>
+                <div class="col">
+                    <img src="./images/wind.png">
+                    <div>
+                        <p class="wind">15km/h</p>
+                        <p>Wind Speed</p></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <script src="./script.js"></script>
+    <script src="./main.js"></script>
+    
 </body>
 </html>
