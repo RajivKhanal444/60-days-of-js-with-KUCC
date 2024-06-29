@@ -1,0 +1,40 @@
+Day 29 of learning javascript 
+Today I learnt about event loop. 
+#day29 #60DaysOfJs #learningwithkucc
+
+
+
+code
+<!-- // setTimeout(function cb() {
+//     console.log('hello')
+// }, 5000); -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Start st Counter</button>
+    <button id="btn2">Start raf Counter</button>
+    <button id ="btn3">Start both  </button>
+<div>set timeout counter: <span id="st">0</span></div>
+<div>request animation frame counter: <span id="raf">0</span></div>
+<scrip>
+    function stCounter(i){
+        st.innerText=i
+        setTimeout(()=>stCounter(i+1),0)
+    }
+    function rafCounter(i){
+        raf.innerText=i
+        requestAnimationFrame(()=>{
+            rafCounter(i+1)
+        })
+    }
+    btn.addEventListener('click',()=>stCounter(0),false)
+    btn2.addEventListener('click',()=>rafCounter(0),false)
+</scrip>
+</body>
+</html>
+
