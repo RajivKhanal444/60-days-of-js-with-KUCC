@@ -1,0 +1,32 @@
+Day 37 of learning javascript
+Today I learnt about basic of hooks and how they can be used to store something in the local storage of the browser.  
+#day37 #60DaysOfJs #learningwithkucc
+
+
+
+  code part1
+  import React, {useState} from'react'
+import useLocalStorage from './part2';
+export default function App(){
+    const [name, setName]=useLocalStorage
+
+    return(
+        <input
+        type='text'
+        value={name}
+        onChange={e=> setName(e.target.value)}
+        />
+    )
+}
+
+App()
+
+  part 2
+
+  import { useState } from "react";
+
+export default function useLocalStorage(){
+    const[value, setValue]=useState
+    return [value, setValue]
+}
+
