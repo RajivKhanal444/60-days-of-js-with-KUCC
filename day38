@@ -1,0 +1,91 @@
+Day 38 of learning javascript
+Today I learnt about routers. Inside of it there are many things like outlets, routes, route, navigate, links etc
+#day38 #60DaysOfJs #learningwithkucc
+
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+// import reportWebVitals from './reportWebVitals';
+
+import {BrowserRouter as Router, Routes, Route, Navigate, Link, Outlet, useParams} from 'react-router-dom'
+
+ReactDOM.render(
+  <Router>
+    <Routes>
+      <Route path='/'element={home()}/>
+      <Route path='/myapps'element={<Navigate replace to="/learn"/>}/>
+      <Route path='/learn'element={learn()}>
+      <Route path='course' element={course()} ><Route path=':courseid' element={courseid()}></Route></Route>
+      <Route path='bundle' element={bundle()} />
+      </Route>
+    </Routes>
+  </Router>,
+  document.getElementById('root')
+);
+
+
+function home (){
+  return (
+    <div>
+      <h1>Home Route</h1>
+    </div>
+  )
+}
+
+function learn (){
+  return (
+    <div>
+      <h1>learn</h1>
+      <h4>Learn New Things</h4>
+      <Link className="btn btn-success" to="/learn/course">course</Link>
+      <Link className="btn btn-primary" to="/learn/bundle">bulndle</Link>
+      <Outlet/>
+    </div>
+  )
+}
+
+
+function course(){
+  const coursrlist=["React","Angular","Vue"]
+  const random=coursrlist[Math.floor(Math.random()*coursrlist.length)]
+  return (
+    <div>
+      <h1>buldle list</h1>
+      <h4>buldle card</h4>
+      <Outlet/>
+    </div>
+  )
+}
+
+
+
+function bundle(){
+  return (
+    <div>
+      <h1>course list</h1>
+      <h4>course card</h4>
+    </div>
+  )
+}
+
+function courseid(){
+  const {courseid}=useParams
+  return (
+    <div>
+      <h1>URL Parmas is :{courseid}</h1>
+    </div>
+  )
+}
+
+
+
+
+
+
+
+
+
+
+// reportWebVitals();
