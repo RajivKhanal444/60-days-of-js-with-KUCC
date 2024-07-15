@@ -1,0 +1,55 @@
+Today I continued,
+it has timer that shows second
+I couldn't get this thing to synchronized across other pages and I tried to add minutes and hour but the code did not work, it is still incomplete...
+#day45 #60DaysOfJs #learningwithkucc
+
+import React, { useEffect, useRef, useState } from "react";
+
+export default function StopWatch() {
+  const [timeSEC,setTime] = useState(0);
+  const timeHandler = useRef(null);
+
+  const timeMIN = useState(null)
+  const timeHOUR = useState(null)
+  useEffect(() => {
+    timeHandler.current = setInterval(() => {
+        setTime(prevTime => prevTime + 1);
+      }, 1000);
+      
+    
+      return () => clearInterval(timeHandler.current);
+  }, []);
+ 
+ 
+  if (timeHandler.current==59){
+    timeMIN = timeMIN + 1
+  }
+
+  const start=()=>{
+  }
+  const restartTimer = () => {
+    clearInterval(timeHandler.current); 
+    setTime(0); 
+    timeHandler.current = setInterval(() => {
+      setTime(prevTime => prevTime + 1);
+    }, 1000); 
+  };
+
+
+  const pauseTimer = () => {
+    clearInterval(timeHandler.current);
+  };
+
+  return (
+    <>
+      <h1>{timeHOUR}:{timeMIN}:{timeSEC}</h1>
+      <button onClick={start}>Start</button>
+      <button onClick={restartTimer} className="btn restart">
+        Restart
+      </button>
+      <button onClick={pauseTimer} className="btn pause">
+        Pause
+      </button>
+    </>
+  );
+}
