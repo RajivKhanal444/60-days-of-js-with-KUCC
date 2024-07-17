@@ -1,0 +1,41 @@
+Day 47 of learning javascript 
+Today I learnt about the api integration with axios api in react.js
+#day47 #60DaysOfJs #learningwithkucc
+
+
+  app.js
+  import './App.css';
+import axios from 'axios'
+function App() {
+  // const getQuote=()=>{
+  //   axios.get('https://api.quotsble.io/random').then(Response=>{
+  //     console.log(Response.data.content)
+  //   }).catch(error=>{
+  //     console.log(error)
+  //   })
+  // }
+  // return (
+  //  <>
+  //  <div className="App">
+  //   <button onClick={getQuote}>Get Quote</button>
+  // </div>
+  //  </>
+  // );
+
+
+  const apiUrl ="https://api.quotsble.io/random"
+  axios.get(apiUrl).then(res=>{
+    console.log(res.data)
+  }).catch(err => {
+    console.log(err)
+  })
+
+  return (
+     <>
+
+     </>
+    );
+}
+
+
+export default App
